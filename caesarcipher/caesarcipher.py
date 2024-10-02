@@ -1,3 +1,8 @@
+
+# you can always use modulo to find the index value when it goes out of range
+
+
+
 logo = """           
  ,adPPYba, ,adPPYYba,  ,adPPYba, ,adPPYba, ,adPPYYba, 8b,dPPYba,  
 a8"     "" ""     `Y8 a8P_____88 I8[    "" ""     `Y8 88P'   "Y8  
@@ -61,8 +66,6 @@ while(Continue!= False):
         break
 
 print("Goodbye")
-
-
 
 
 
