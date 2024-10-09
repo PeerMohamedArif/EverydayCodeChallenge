@@ -35,6 +35,8 @@ while not game_over:
     print(f"\n\n{vs}\n\n")
     print(f"Against B: {to_compare[1]['name']}, {to_compare[1]['description']}, from {to_compare[1]['country']}")
     given_value = input("Who has more followers? Type 'A' or 'B': ").lower()
+    print("\n"*20)
+    print(logo)
 
     def print_score_add():
         # Use the global score variable
