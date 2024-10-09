@@ -25,6 +25,8 @@ game_over = False
 def random_choice():
     A_value = random.choice(data)
     B_value = random.choice(data)
+    while A_value == B_value:
+        B_value = random.choice(data)
     return [A_value, B_value]
 while not game_over:
     to_compare = random_choice()
