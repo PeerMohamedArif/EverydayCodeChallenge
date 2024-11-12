@@ -25,3 +25,5 @@ for birthday in birthday_dict:
                                 msg=f"Subject: Happy Birthday!!!\n\n{contents}"
                                 )
 
+
+Use pythonanywhere.com to run your python code in the cloud
