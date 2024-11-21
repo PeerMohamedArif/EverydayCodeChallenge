@@ -9,8 +9,8 @@ account_sid = os.environ["TWILIO_ACCOUNT_SID"]
 auth_token = os.environ["TWILIO_AUTH_TOKEN"]
 
 
-OWM_endpoint="https://api.openweathermap.org/data/2.5/forecast"
-api_key= "335c7ff9bf24935a52d551826c889472"
+OWM_endpoint=""
+api_key= ""
 weather_params={
     "lat":-3.386925,
     "lon":36.682995,
@@ -37,8 +37,8 @@ if will_rain:
     client = Client(account_sid, auth_token,http_client=proxy_client)
     message = client.messages.create(
         body="Rain Alert,Its going to rain today ,Be sure to take an umbrella",
-        from_="+15126452756",
-        to="+919840900299",
+        from_="",
+        to="",
     )
 
     print(message.status)
