@@ -1,12 +1,13 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
 import time
 
-ACCOUNT_EMAIL = ""
-ACCOUNT_PASSWORD = ""
-PHONE = ""
+ACCOUNT_EMAIL = YOUR LOGIN EMAIL
+ACCOUNT_PASSWORD = YOUR LOGIN PASSWORD
+PHONE = YOUR PHONE NUMBER
 
 
 def abort_application():
@@ -20,11 +21,18 @@ def abort_application():
     discard_button.click()
 
 
+chrome_driver_path = YOUR CHROME DRIVER PATH
+
+# Optional - Automatically keep your chromedriver up to date.
+from webdriver_manager.chrome import ChromeDriverManager  # pip install webdriver-manager
+chrome_driver_path = ChromeDriverManager(path=YOUR CHROME DRIVER FOLDER).install()
+
 # Optional - Keep the browser open if the script crashes.
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_experimental_option("detach", True)
 
-driver = webdriver.Chrome(options=chrome_options)
+service = ChromeService(executable_path=chrome_driver_path)
+driver = webdriver.Chrome(service=service, options=chrome_options)
 
 driver.get("https://www.linkedin.com/jobs/search/?currentJobId=3586148395&f_LF=f_AL&geoId=101356765&"
            "keywords=python&location=London%2C%20England%2C%20United%20Kingdom&refresh=true")
