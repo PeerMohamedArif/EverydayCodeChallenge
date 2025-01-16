@@ -42,6 +42,7 @@ class InstaFollower:
       
         # Click "Not now" and ignore Save-login info prompt
         # you can use "//{which tag}[conatins(text(),'{TEXT TO SEARCH}')]"        # see below for example
+        #'//*[@id="react-root"]/section/main/div/header/section/ul/li[2]/a')      # see they can use @id or @class over here as well
         save_login_prompt = self.driver.find_element(by=By.XPATH, value="//div[contains(text(), 'Not now')]")
         if save_login_prompt:
             save_login_prompt.click()
