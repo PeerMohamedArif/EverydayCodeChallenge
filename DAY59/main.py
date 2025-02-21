@@ -2,7 +2,7 @@ from flask import render_template
 from flask import Flask
 import requests
 
-posts=requests.get(url="https://api.npoint.io/e5c2b9cf2eb31ac00df6").json()
+posts=requests.get(url="your endpoint").json()
 
 app=Flask(__name__)
 
