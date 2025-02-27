@@ -1,0 +1,105 @@
+Git commands
+
+Local repo
+
+Cd to the folder we work with
+Git init
+Git status
+Git add file name or git add .
+Git status
+
+If files already added when you checkk status and want to remove some file you can remove all file again using
+
+Git rm —cached -r .     The r stands for recursive like a for loop on all files 
+
+You have a file which is secrets file and files you want to ignore you can create 
+
+Touch .gitignore
+
+Inside that file you can mention all the files to ignore and  then git add.  And then commit 
+
+Git commit -m “message”
+Git log
+
+Used to check the commits in a file 
+
+To rollback to a previous version you can use 
+
+Git checkout <file name >
+
+Git checkout <branch name> used to switch to a  particular branch 
+
+Git switch <branch name>
+ rename master to main
+git branch -m master main
+
+
+Remote repo 
+Git remote add orgin “URL”
+
+Check branch
+Git branch 
+
+Rename branch name  if MASTER
+Git branch -m main
+
+Git push -u orgin main
+
+Cloning
+
+Git clone <URL>
+ Or
+git pull [<remote>] [<branch>]
+
+After you create another branch with git  branch <branch name>
+
+Make changes to the files  meanwhile the main branch with the same files won’t have that changes 
+
+If you feel the new branch is a good add on you can merge it with the main branch 
+
+First go to main branch using git checkout main
+
+Then git merge <new branch name> 
+
+Then it opens a text editor in the terminal itself  you can use ‘q’ key in key board or command  :q!   To quit it
+
+Ls -a shows all the hidden files 
+ls only shows the files that are not hidden 
+
+
+
+Fork repos
+
+Is kind of like a read only access and giving a copy to other remote repo of our remote repo   so basically if we clone whatever changes
+we do and commit will be done to our remote repo(sort of write access)
+
+But forking Is like a giving an entire copy separately
+So when we fork and make changes we can only push to our own remote repo and the changes won’t be reflected in the owners remote repo
+
+If the forked person made changes to the code and have pushed to their own remote repo and wants the  actual owner to use those changes  
+the owner can pull those changes  
+
+So the forked person generates a pull request for the owner and if the owner approves then the pull request is implemented and
+henceforth the changes implemented by the forked person will now be reflected in the owner remote repo as well 
+
+
+
+--------image of branch for better explantion------ check system--------
+
+
+￼
+
+So the forked person  account can create a new pull request  and tell changes as a message  to owner
+
+Buttons  forked person account->forked repo->new pull request-> create pull request -> message 
+
+
+In owner account there will be pull request as 1 in the button
+
+Review and send message and merge  that’s all      for large file   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git  git remote -v  brew install git-lfs  git lfs install  git lfs track "weights.hdf5" "classifier-resnet-weights.weights.h5"
+
+git add .gitattributes
+git commit -m "Track large files using Git LFS"  all the large file names be carful with this   git lfs ls-files  - verify 
+
+git add .  # Add everything in the folder
+git commit -m "Initial commit with Git LFS tracking"  git push origin main   if it is first push  git push --set-upstream origin main    to remove git from a folder for ifs  rm -f .gitattributes  to remove git completely from a folder rm -rf .git 
